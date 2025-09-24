@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Arraypush() {
-  let nexId = 6;
+  const [nextId, setNextId] = useState(6);
   function handleDelete(id) {
     const newDevices1 = [...devices];
     let index = 0;
@@ -51,8 +51,8 @@ export default function Arraypush() {
           //   const newDevice = [...devices];
           //   newDevice.push(deviceName);
           //   setDevices(newDevice);
-          setDevices([...devices, { id: nexId, name: deviceName }]);
-          nexId = nexId + 1;
+          setDevices([...devices, { id: nextId, name: deviceName }]);
+          setNextId(nextId + 1);
         }}
       >
         add
