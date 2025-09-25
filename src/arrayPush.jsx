@@ -15,6 +15,19 @@ export default function Arraypush() {
     newDevices1.splice(selectIndex, 1);
     setDevices(newDevices1);
   }
+  function handleEdit(ide){
+    const newDevice1 = devices.map((edt)=>{
+      if(edt.id == ide){
+        let newDevice = {...devices , name:edt.name+ "Hello"} 
+        return newDevice
+      }
+      else{
+        return edt
+      }
+    })
+    setDevices(newDevice1)
+  }
+
   const [devices, setDevices] = useState([
     { id: 1, name: "app" },
     { id: 2, name: "web" },
@@ -32,6 +45,14 @@ export default function Arraypush() {
           }}
         >
           delete
+        </button>
+
+         <button
+          onClick={() => {
+            handleEdit(dev.id);
+          }}
+        >
+          edit 
         </button>
       </li>
     );

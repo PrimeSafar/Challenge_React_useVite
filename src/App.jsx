@@ -4,9 +4,10 @@
 import './App.css'
 // import SolScoreboard from './solFormChallenge'
 import Arraypush from './arrayPush'
+import ShoppingCart from './arrayProblem'
 function App() {
   return (
-    <Arraypush />
+    <ShoppingCart />
   )
 }
 
